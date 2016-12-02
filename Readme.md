@@ -1,5 +1,6 @@
-## Jupiter
+![](header.png)
 
+[![Travis](https://img.shields.io/travis/Comyar Zaheri/Jupiter/master.svg)](https://travis-ci.org/comyar/Jupiter/branches)
 [![Platforms](https://img.shields.io/cocoapods/p/Jupiter.svg)](https://cocoapods.org/pods/Jupiter)
 [![License](https://img.shields.io/cocoapods/l/Jupiter.svg)](https://raw.githubusercontent.com/Comyar Zaheri/Jupiter/master/LICENSE)
 
@@ -7,19 +8,23 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/Jupiter.svg)](https://cocoapods.org/pods/Jupiter)
 
-[![Travis](https://img.shields.io/travis/Comyar Zaheri/Jupiter/master.svg)](https://travis-ci.org/Comyar Zaheri/Jupiter/branches)
 
-The Simple Swift Weather Framework
 
 - [Requirements](#requirements)
-- [Installation](#installation)
 - [Usage](#usage)
+- [Installation](#installation)
 - [License](#license)
 
 ## Requirements
 
-- iOS 8.0+ / Mac OS X 10.10+ / tvOS 9.0+ / watchOS 2.0+
+- iOS 10.0+ / Mac OS X 10.12+ / tvOS 10.0+ / watchOS 2.0+
 - Xcode 8.0+
+
+## Usage
+
+Supported Weather APIs:
+
+- [Dark Sky](https://darksky.net/dev/) (WIP historical data support)
 
 ## Installation
 
@@ -37,7 +42,7 @@ To integrate Jupiter into your Xcode project using CocoaPods, specify it in your
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
+platform :ios, '10.0'
 use_frameworks!
 
 pod 'Jupiter', '~> 0.0.1'
@@ -95,7 +100,7 @@ $ git init
 - Add Jupiter as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
 
 ```bash
-$ git submodule add https://github.com/Comyar Zaheri/Jupiter.git
+$ git submodule add https://github.com/comyar/Jupiter.git
 $ git submodule update --init --recursive
 ```
 
@@ -126,8 +131,6 @@ $ git submodule update --init --recursive
 - Add the downloaded `Jupiter.framework`.
 - And that's it!
 
-## Usage
-
 ## License
 
-Jupiter is released under the MIT license. See [LICENSE](https://github.com/Comyar Zaheri/Jupiter/blob/master/LICENSE) for details.
+Jupiter is released under the MIT license. See [LICENSE](https://github.com/comyar/Jupiter/blob/master/LICENSE) for details.
