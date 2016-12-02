@@ -56,7 +56,7 @@ let api = DarkSkyAPI(key: "<API_KEY>")
 let request = api.forecast(latitude: 47.6062, longitude: -122.3321)
 
 /// Creating without the convenience API also works:
-/// let request =  DarkSkyForecastRequest(key: "<API_KEY>", latitude: 47.6062, longitude: -122.3321)
+/// let request = DarkSkyForecastRequest(key: "<API_KEY>", latitude: 47.6062, longitude: -122.3321)
 
 /// Configure the request
 request.excludes = [.minutely, .hourly]
