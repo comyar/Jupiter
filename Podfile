@@ -8,7 +8,7 @@ def pods
   pod 'Unbox', '~> 2.3'
 end
 
-target 'WeatherKit' do
+target 'Jupiter' do
   pods
 end
 

@@ -1,6 +1,6 @@
 //
 //  Climacons.swift
-//  WeatherKit
+//  Jupiter
 //
 //  MIT License
 //

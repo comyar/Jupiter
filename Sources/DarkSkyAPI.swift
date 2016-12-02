@@ -1,6 +1,6 @@
 //
 //  DarkSkyAPI.swift
-//  WeatherKit
+//  Jupiter
 //
 //  MIT License
 //

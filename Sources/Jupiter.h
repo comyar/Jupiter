@@ -1,6 +1,6 @@
 //
-//  WeatherKit.h
-//  WeatherKit
+//  Jupiter.h
+//  Jupiter
 //
 //  MIT License
 //
@@ -29,8 +29,8 @@
 
 @import UIKit;
 
-//! Project version number for WeatherKit.
-FOUNDATION_EXPORT double WeatherKitVersionNumber;
+//! Project version number for Jupiter.
+FOUNDATION_EXPORT double JupiterVersionNumber;
 
-//! Project version string for WeatherKit.
-FOUNDATION_EXPORT const unsigned char WeatherKitVersionString[];
+//! Project version string for Jupiter.
+FOUNDATION_EXPORT const unsigned char JupiterVersionString[];

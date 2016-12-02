@@ -7,26 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2BDBDBBD6935D19F4EC4FE9C /* Pods_WeatherKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16B735B298A576ED54E52FCD /* Pods_WeatherKit.framework */; };
+		04E7D4B2EC2FF1E0E1FEED2D /* Pods_Jupiter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 513EC2897FAE7F200D98104F /* Pods_Jupiter.framework */; };
 		DDE144F51DF15C120054E3A7 /* Climacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE144F01DF15C120054E3A7 /* Climacon.swift */; };
 		DDE144F61DF15C120054E3A7 /* DarkSkyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE144F11DF15C120054E3A7 /* DarkSkyAPI.swift */; };
 		DDE144F81DF15C120054E3A7 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE144F31DF15C120054E3A7 /* Request.swift */; };
-		DDE144F91DF15C120054E3A7 /* WeatherKit.h in Headers */ = {isa = PBXBuildFile; fileRef = DDE144F41DF15C120054E3A7 /* WeatherKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDE144F91DF15C120054E3A7 /* Jupiter.h in Headers */ = {isa = PBXBuildFile; fileRef = DDE144F41DF15C120054E3A7 /* Jupiter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		16B735B298A576ED54E52FCD /* Pods_WeatherKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CAE3B4658F037F67BB7A2F9 /* Pods-WeatherKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherKitTests/Pods-WeatherKitTests.debug.xcconfig"; sourceTree = "<group>"; };
-		69AADA530696C89E7BCC67A2 /* Pods-WeatherKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherKitTests/Pods-WeatherKitTests.release.xcconfig"; sourceTree = "<group>"; };
-		70C9256DE0D0E1464C8B8324 /* Pods_WeatherKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		863DEC888E0A763B2604A827 /* Pods-WeatherKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherKit/Pods-WeatherKit.debug.xcconfig"; sourceTree = "<group>"; };
-		8A837FF7B127C6CAD39EAA8D /* Pods-WeatherKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherKit/Pods-WeatherKit.release.xcconfig"; sourceTree = "<group>"; };
-		DD41BA0F1DEF98CD0058C113 /* WeatherKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeatherKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3615E28958D832E9317D1293 /* Pods-Jupiter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jupiter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jupiter/Pods-Jupiter.release.xcconfig"; sourceTree = "<group>"; };
+		513EC2897FAE7F200D98104F /* Pods_Jupiter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jupiter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABAEB45A244718DD9BBED249 /* Pods-Jupiter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jupiter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jupiter/Pods-Jupiter.debug.xcconfig"; sourceTree = "<group>"; };
+		DD41BA0F1DEF98CD0058C113 /* Jupiter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Jupiter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE144F01DF15C120054E3A7 /* Climacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Climacon.swift; sourceTree = "<group>"; };
 		DDE144F11DF15C120054E3A7 /* DarkSkyAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkSkyAPI.swift; sourceTree = "<group>"; };
 		DDE144F21DF15C120054E3A7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDE144F31DF15C120054E3A7 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		DDE144F41DF15C120054E3A7 /* WeatherKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherKit.h; sourceTree = "<group>"; };
+		DDE144F41DF15C120054E3A7 /* Jupiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jupiter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,31 +31,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BDBDBBD6935D19F4EC4FE9C /* Pods_WeatherKit.framework in Frameworks */,
+				04E7D4B2EC2FF1E0E1FEED2D /* Pods_Jupiter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		824D6F32E964171FABAC06CB /* Frameworks */ = {
+		02573FB5247CA67E85751E9D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				16B735B298A576ED54E52FCD /* Pods_WeatherKit.framework */,
-				70C9256DE0D0E1464C8B8324 /* Pods_WeatherKitTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8295463D4FA4B54662DF1D2E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				863DEC888E0A763B2604A827 /* Pods-WeatherKit.debug.xcconfig */,
-				8A837FF7B127C6CAD39EAA8D /* Pods-WeatherKit.release.xcconfig */,
-				3CAE3B4658F037F67BB7A2F9 /* Pods-WeatherKitTests.debug.xcconfig */,
-				69AADA530696C89E7BCC67A2 /* Pods-WeatherKitTests.release.xcconfig */,
+				ABAEB45A244718DD9BBED249 /* Pods-Jupiter.debug.xcconfig */,
+				3615E28958D832E9317D1293 /* Pods-Jupiter.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		2913D7728A341F8058B3D82C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				513EC2897FAE7F200D98104F /* Pods_Jupiter.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		DD41BA051DEF98CD0058C113 = {
@@ -66,15 +60,15 @@
 			children = (
 				DDE144EF1DF15C120054E3A7 /* Sources */,
 				DD41BA101DEF98CD0058C113 /* Products */,
-				8295463D4FA4B54662DF1D2E /* Pods */,
-				824D6F32E964171FABAC06CB /* Frameworks */,
+				02573FB5247CA67E85751E9D /* Pods */,
+				2913D7728A341F8058B3D82C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		DD41BA101DEF98CD0058C113 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD41BA0F1DEF98CD0058C113 /* WeatherKit.framework */,
+				DD41BA0F1DEF98CD0058C113 /* Jupiter.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,7 +76,7 @@
 		DDE144EF1DF15C120054E3A7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				DDE144F41DF15C120054E3A7 /* WeatherKit.h */,
+				DDE144F41DF15C120054E3A7 /* Jupiter.h */,
 				DDE144FB1DF15C280054E3A7 /* Core */,
 				DDE144FC1DF15C350054E3A7 /* DarkSky */,
 				DDE144FA1DF15C160054E3A7 /* Supporting Files */,
@@ -122,31 +116,31 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDE144F91DF15C120054E3A7 /* WeatherKit.h in Headers */,
+				DDE144F91DF15C120054E3A7 /* Jupiter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		DD41BA0E1DEF98CD0058C113 /* WeatherKit */ = {
+		DD41BA0E1DEF98CD0058C113 /* Jupiter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD41BA171DEF98CD0058C113 /* Build configuration list for PBXNativeTarget "WeatherKit" */;
+			buildConfigurationList = DD41BA171DEF98CD0058C113 /* Build configuration list for PBXNativeTarget "Jupiter" */;
 			buildPhases = (
-				03A44C3801CE60070CB6F6D3 /* [CP] Check Pods Manifest.lock */,
+				488C89344120E5BE4CD1CD27 /* [CP] Check Pods Manifest.lock */,
 				DD41BA0A1DEF98CD0058C113 /* Sources */,
 				DD41BA0B1DEF98CD0058C113 /* Frameworks */,
 				DD41BA0C1DEF98CD0058C113 /* Headers */,
 				DD41BA0D1DEF98CD0058C113 /* Resources */,
-				0224363DFD98B826ABF4F758 /* [CP] Copy Pods Resources */,
+				6A3224558CDC06A5CE3F7393 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = WeatherKit;
+			name = Jupiter;
 			productName = WeatherKit;
-			productReference = DD41BA0F1DEF98CD0058C113 /* WeatherKit.framework */;
+			productReference = DD41BA0F1DEF98CD0058C113 /* Jupiter.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -167,7 +161,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DD41BA091DEF98CD0058C113 /* Build configuration list for PBXProject "WeatherKit" */;
+			buildConfigurationList = DD41BA091DEF98CD0058C113 /* Build configuration list for PBXProject "Jupiter" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -179,7 +173,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DD41BA0E1DEF98CD0058C113 /* WeatherKit */,
+				DD41BA0E1DEF98CD0058C113 /* Jupiter */,
 			);
 		};
 /* End PBXProject section */
@@ -195,22 +189,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0224363DFD98B826ABF4F758 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeatherKit/Pods-WeatherKit-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		03A44C3801CE60070CB6F6D3 /* [CP] Check Pods Manifest.lock */ = {
+		488C89344120E5BE4CD1CD27 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -223,6 +202,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6A3224558CDC06A5CE3F7393 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jupiter/Pods-Jupiter-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -342,7 +336,7 @@
 		};
 		DD41BA181DEF98CD0058C113 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 863DEC888E0A763B2604A827 /* Pods-WeatherKit.debug.xcconfig */;
+			baseConfigurationReference = ABAEB45A244718DD9BBED249 /* Pods-Jupiter.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -364,7 +358,7 @@
 		};
 		DD41BA191DEF98CD0058C113 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A837FF7B127C6CAD39EAA8D /* Pods-WeatherKit.release.xcconfig */;
+			baseConfigurationReference = 3615E28958D832E9317D1293 /* Pods-Jupiter.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -386,7 +380,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DD41BA091DEF98CD0058C113 /* Build configuration list for PBXProject "WeatherKit" */ = {
+		DD41BA091DEF98CD0058C113 /* Build configuration list for PBXProject "Jupiter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD41BA151DEF98CD0058C113 /* Debug */,
@@ -395,7 +389,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD41BA171DEF98CD0058C113 /* Build configuration list for PBXNativeTarget "WeatherKit" */ = {
+		DD41BA171DEF98CD0058C113 /* Build configuration list for PBXNativeTarget "Jupiter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD41BA181DEF98CD0058C113 /* Debug */,

@@ -1,6 +1,6 @@
 //
 //  Request.swift
-//  WeatherKit
+//  Jupiter
 //
 //  MIT License
 //

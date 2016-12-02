@@ -2,13 +2,13 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:WeatherKit.xcodeproj">
+      location = "group:/Users/Comyar/Dropbox/Development/WeatherKit/Jupiter.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:WeatherKit.playground">
+      location = "group:/Users/Comyar/Dropbox/Development/WeatherKit/Playground.playground">
    </FileRef>
    <FileRef
-      location = "group:WeatherKit.podspec">
+      location = "group:/Users/Comyar/Dropbox/Development/WeatherKit/Jupiter.podspec">
    </FileRef>
    <FileRef
       location = "group:LICENSE">

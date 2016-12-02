@@ -1,6 +1,6 @@
 //
-//  WeatherKit.swift
-//  WeatherKit
+//  Package.swift
+//  Jupiter
 //
 //  MIT License
 //
@@ -33,7 +33,7 @@ import PackageDescription
 // MARK:- Package
 
 let package = Package(
-    name: "WeatherKit",
+    name: "Jupiter",
     dependencies: [
   .Package(url: "https://github.com/JohnSundell/Unbox.git", versions: Version(2,0,0)..<Version(3,0,0))
     ]

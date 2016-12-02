@@ -1,14 +1,13 @@
-## WeatherKit
+## Jupiter
 
-[![Platforms](https://img.shields.io/cocoapods/p/WeatherKit.svg)](https://cocoapods.org/pods/WeatherKit)
-[![License](https://img.shields.io/cocoapods/l/WeatherKit.svg)](https://raw.githubusercontent.com/Comyar Zaheri/WeatherKit/master/LICENSE)
+[![Platforms](https://img.shields.io/cocoapods/p/Jupiter.svg)](https://cocoapods.org/pods/Jupiter)
+[![License](https://img.shields.io/cocoapods/l/Jupiter.svg)](https://raw.githubusercontent.com/Comyar Zaheri/Jupiter/master/LICENSE)
 
 [![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![CocoaPods compatible](https://img.shields.io/cocoapods/v/WeatherKit.svg)](https://cocoapods.org/pods/WeatherKit)
+[![CocoaPods compatible](https://img.shields.io/cocoapods/v/Jupiter.svg)](https://cocoapods.org/pods/Jupiter)
 
-[![Travis](https://img.shields.io/travis/Comyar Zaheri/WeatherKit/master.svg)](https://travis-ci.org/Comyar Zaheri/WeatherKit/branches)
-[![Cookiecutter-Swift](https://img.shields.io/badge/cookiecutter--swift-framework-red.svg)](http://github.com/cookiecutter-swift/Framework)
+[![Travis](https://img.shields.io/travis/Comyar Zaheri/Jupiter/master.svg)](https://travis-ci.org/Comyar Zaheri/Jupiter/branches)
 
 The Simple Swift Weather Framework
 
@@ -32,16 +31,16 @@ The Simple Swift Weather Framework
 $ gem install cocoapods
 ```
 
-> CocoaPods 1.1.0+ is required to build WeatherKit 0.0.1+.
+> CocoaPods 1.1.0+ is required to build Jupiter 0.0.1+.
 
-To integrate WeatherKit into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate Jupiter into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'WeatherKit', '~> 0.0.1'
+pod 'Jupiter', '~> 0.0.1'
 ```
 
 Then, run the following command:
@@ -61,29 +60,29 @@ $ brew update
 $ brew install carthage
 ```
 
-To integrate WeatherKit into your Xcode project using Carthage, specify it in your `Cartfile`:
+To integrate Jupiter into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "WeatherKit/WeatherKit" ~> 0.0.1
+github "Jupiter/Jupiter" ~> 0.0.1
 ```
 ### Swift Package Manager
 
-To use WeatherKit as a [Swift Package Manager](https://swift.org/package-manager/) package just add the following in your Package.swift file.
+To use Jupiter as a [Swift Package Manager](https://swift.org/package-manager/) package just add the following in your Package.swift file.
 
 ``` swift
 import PackageDescription
 
 let package = Package(
-    name: "HelloWeatherKit",
+    name: "HelloJupiter",
     dependencies: [
-        .Package(url: "https://github.com/Comyar Zaheri/WeatherKit.git", "0.0.1")
+        .Package(url: "https://github.com/Comyar Zaheri/Jupiter.git", "0.0.1")
     ]
 )
 ```
 
 ### Manually
 
-If you prefer not to use either of the aforementioned dependency managers, you can integrate WeatherKit into your project manually.
+If you prefer not to use either of the aforementioned dependency managers, you can integrate Jupiter into your project manually.
 
 #### Git Submodules
 
@@ -93,42 +92,42 @@ If you prefer not to use either of the aforementioned dependency managers, you c
 $ git init
 ```
 
-- Add WeatherKit as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
+- Add Jupiter as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
 
 ```bash
-$ git submodule add https://github.com/Comyar Zaheri/WeatherKit.git
+$ git submodule add https://github.com/Comyar Zaheri/Jupiter.git
 $ git submodule update --init --recursive
 ```
 
-- Open the new `WeatherKit` folder, and drag the `WeatherKit.xcodeproj` into the Project Navigator of your application's Xcode project.
+- Open the new `Jupiter` folder, and drag the `Jupiter.xcodeproj` into the Project Navigator of your application's Xcode project.
 
     > It should appear nested underneath your application's blue project icon. Whether it is above or below all the other Xcode groups does not matter.
 
-- Select the `WeatherKit.xcodeproj` in the Project Navigator and verify the deployment target matches that of your application target.
+- Select the `Jupiter.xcodeproj` in the Project Navigator and verify the deployment target matches that of your application target.
 - Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
 - In the tab bar at the top of that window, open the "General" panel.
 - Click on the `+` button under the "Embedded Binaries" section.
-- You will see two different `WeatherKit.xcodeproj` folders each with two different versions of the `WeatherKit.framework` nested inside a `Products` folder.
+- You will see two different `Jupiter.xcodeproj` folders each with two different versions of the `Jupiter.framework` nested inside a `Products` folder.
 
     > It does not matter which `Products` folder you choose from.
 
-- Select the `WeatherKit.framework`.
+- Select the `Jupiter.framework`.
 
 - And that's it!
 
-> The `WeatherKit.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
+> The `Jupiter.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
 
 #### Embeded Binaries
 
-- Download the latest release from https://github.com/Comyar Zaheri/WeatherKit/releases
+- Download the latest release from https://github.com/Comyar Zaheri/Jupiter/releases
 - Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
 - In the tab bar at the top of that window, open the "General" panel.
 - Click on the `+` button under the "Embedded Binaries" section.
-- Add the downloaded `WeatherKit.framework`.
+- Add the downloaded `Jupiter.framework`.
 - And that's it!
 
 ## Usage
 
 ## License
 
-WeatherKit is released under the MIT license. See [LICENSE](https://github.com/Comyar Zaheri/WeatherKit/blob/master/LICENSE) for details.
+Jupiter is released under the MIT license. See [LICENSE](https://github.com/Comyar Zaheri/Jupiter/blob/master/LICENSE) for details.
