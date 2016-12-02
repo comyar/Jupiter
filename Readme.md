@@ -8,8 +8,6 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/Jupiter.svg)](https://cocoapods.org/pods/Jupiter)
 
-
-
 - [Requirements](#requirements)
 - [Usage](#usage)
 - [Installation](#installation)
@@ -24,7 +22,7 @@
 
 Supported Weather APIs:
 
-- [Dark Sky](https://darksky.net/dev/) [WIP historical data support](https://github.com/comyar/Jupiter/issues/1)
+- [Dark Sky](https://darksky.net/dev/) (Currently only forecast data, [WIP](https://github.com/comyar/Jupiter/issues/1))
 
 ## Installation
 
