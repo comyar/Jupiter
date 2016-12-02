@@ -37,7 +37,7 @@ let api = DarkSkyAPI(key: "<API_KEY>")
 api.forecast(latitude: 47.6062, longitude: -122.3321).send { result -> Void in
   switch result {
   case .success(let response):
-    // The response here is queryable for any key available in the docs except for "flags", which was not ported
+    // The response here is queryable for any key available in the docs except for "flags"
     print(response)
   case .error(let error):
     print(error)
