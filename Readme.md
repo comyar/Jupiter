@@ -33,6 +33,8 @@ Supported Weather APIs:
 A default ```Request.send``` function is provided that simply uses the shared ```URLSession``` in your app:
 
 ```swift
+import Jupiter
+
 let api = DarkSkyAPI(key: "<API_KEY>")
 api.forecast(latitude: 47.6062, longitude: -122.3321).send { result -> Void in
   switch result {
@@ -48,6 +50,8 @@ api.forecast(latitude: 47.6062, longitude: -122.3321).send { result -> Void in
 However if you'd like to use your own networking stack, you can simply create a ```DarkSkyForecastRequest``` and use the generated URL directly:
 
 ```swift
+import Jupiter
+
 let api = DarkSkyAPI(key: "<API_KEY>")
 let request = api.forecast(latitude: 47.6062, longitude: -122.3321)
 
