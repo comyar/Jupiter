@@ -8,6 +8,8 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/Jupiter.svg)](https://cocoapods.org/pods/Jupiter)
 
+
+
 - [Requirements](#requirements)
 - [Usage](#usage)
 - [Installation](#installation)
@@ -22,7 +24,60 @@
 
 Supported Weather APIs:
 
-- [Dark Sky](https://darksky.net/dev/) (Currently only forecast data, [WIP](https://github.com/comyar/Jupiter/issues/1))
+- [Dark Sky](https://darksky.net/dev/) (WIP historical data support)
+
+### Dark Sky
+
+#### [Forecast Request](https://darksky.net/dev/docs/forecast)
+
+A default ```Request.send``` function is provided that simply uses the shared ```URLSession``` in your app:
+
+```swift
+let api = DarkSkyAPI(key: "<API_KEY>")
+api.forecast(latitude: 47.6062, longitude: -122.3321).send { result -> Void in
+  switch result {
+  case .success(let response):
+    // The response here is queryable for any key available in the docs except for "flags", which was not ported
+    print(response)
+  case .error(let error):
+    print(error)
+  }
+}
+```
+
+However if you'd like to use your own networking stack, you can simply create a ```DarkSkyForecastRequest``` and use the generated URL directly:
+
+```swift
+let api = DarkSkyAPI(key: "<API_KEY>")
+let request = api.forecast(latitude: 47.6062, longitude: -122.3321)
+
+/// Creating a request directly also works:
+/// let request =  DarkSkyForecastRequest(key: "<API_KEY>", latitude: 47.6062, longitude: -122.3321)
+
+/// Configure the request
+request.excludes = [.minutely, .hourly]
+request.lang = .russian
+request.units = .si
+
+/// Get the URL
+let url: URL = request.url!
+
+/// Pass URL to networking layer 
+
+/// Get raw data from networking layer
+let data: Data = ...
+
+/// Parse data and bind to response object
+let response = request.toResponse(data: data)
+```
+
+
+
+
+
+
+
+
 
 ## Installation
 

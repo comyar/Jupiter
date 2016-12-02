@@ -36,17 +36,17 @@
 		39E649AC7F12AC3F053762855F66588A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D63EAC467A28F482A2226540AE65D82 /* Unbox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Unbox-prefix.pch"; sourceTree = "<group>"; };
 		418718072E9136854627D5AD265C5496 /* Pods-Jupiter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jupiter.debug.xcconfig"; sourceTree = "<group>"; };
-		50E36A68C63BD0A49B1B3A30F24F78A2 /* Pods_Jupiter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Jupiter.framework; path = "Pods-Jupiter.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50E36A68C63BD0A49B1B3A30F24F78A2 /* Pods_Jupiter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jupiter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		560BEEF29A3A37D16760C5EC6ACAD527 /* Unbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Unbox.xcconfig; sourceTree = "<group>"; };
 		6DB7E06699A341ED7C8D90ABD2E4144D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		991474CE061784DFD9D447FE70445DFD /* Unbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Unbox.modulemap; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		991474CE061784DFD9D447FE70445DFD /* Unbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Unbox.modulemap; sourceTree = "<group>"; };
 		A29939878040D4B30DE510B4C930CA54 /* Pods-Jupiter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jupiter.release.xcconfig"; sourceTree = "<group>"; };
 		A635401944412E396EA69FF81D70EAD8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		AB4E5D6A9F181A0E2206608407424CE2 /* Unbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Unbox.framework; path = Unbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB4E5D6A9F181A0E2206608407424CE2 /* Unbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Unbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF044B90D042EF08BE91BB43EB5D2E57 /* Pods-Jupiter-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Jupiter-resources.sh"; sourceTree = "<group>"; };
 		AFA88F9D88439D84E5C727936E836223 /* Pods-Jupiter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Jupiter-dummy.m"; sourceTree = "<group>"; };
-		CF3B35621412482D1396C68EB1E4D35E /* Pods-Jupiter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Jupiter.modulemap"; sourceTree = "<group>"; };
+		CF3B35621412482D1396C68EB1E4D35E /* Pods-Jupiter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Jupiter.modulemap"; sourceTree = "<group>"; };
 		E3D8D782EE2342F1BFD3EC035B039260 /* Pods-Jupiter-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Jupiter-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E7512E09FD626FC8CE110467EAD517EA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -143,7 +143,6 @@
 				307DE3C68047C0E19358863687B0E39F /* Unbox.swift */,
 				23333F16D8ADCEAC6FAC78FC5205F222 /* Support Files */,
 			);
-			name = Unbox;
 			path = Unbox;
 			sourceTree = "<group>";
 		};

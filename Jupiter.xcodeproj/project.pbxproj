@@ -24,6 +24,7 @@
 		DDE144F21DF15C120054E3A7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDE144F31DF15C120054E3A7 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		DDE144F41DF15C120054E3A7 /* Jupiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jupiter.h; sourceTree = "<group>"; };
+		DDE144FE1DF163C60054E3A7 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Playground.playground; path = Pods/Playground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 		DD41BA051DEF98CD0058C113 = {
 			isa = PBXGroup;
 			children = (
+				DDE144FE1DF163C60054E3A7 /* Playground.playground */,
 				DDE144EF1DF15C120054E3A7 /* Sources */,
 				DD41BA101DEF98CD0058C113 /* Products */,
 				02573FB5247CA67E85751E9D /* Pods */,
