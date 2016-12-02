@@ -24,7 +24,7 @@
 
 Supported Weather APIs:
 
-- [Dark Sky](https://darksky.net/dev/) (WIP historical data support)
+- [Dark Sky](https://darksky.net/dev/) [WIP historical data support](https://github.com/comyar/Jupiter/issues/1)
 
 ## Installation
 
