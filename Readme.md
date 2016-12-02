@@ -24,7 +24,7 @@
 
 Supported Weather APIs:
 
-- [Dark Sky](https://darksky.net/dev/) (WIP historical data support)
+- [Dark Sky](https://darksky.net/dev/) ([WIP](https://github.com/comyar/Jupiter/issues/1) historical data support)
 
 ### Dark Sky
 
@@ -51,7 +51,7 @@ However if you'd like to use your own networking stack, you can simply create a 
 let api = DarkSkyAPI(key: "<API_KEY>")
 let request = api.forecast(latitude: 47.6062, longitude: -122.3321)
 
-/// Creating a request directly also works:
+/// Creating without the convenience API also works:
 /// let request =  DarkSkyForecastRequest(key: "<API_KEY>", latitude: 47.6062, longitude: -122.3321)
 
 /// Configure the request
@@ -70,14 +70,6 @@ let data: Data = ...
 /// Parse data and bind to response object
 let response = request.toResponse(data: data)
 ```
-
-
-
-
-
-
-
-
 
 ## Installation
 
