@@ -5,11 +5,6 @@
 [![License](https://img.shields.io/cocoapods/l/Jupiter.svg)](https://raw.githubusercontent.com/Comyar Zaheri/Jupiter/master/LICENSE)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/Jupiter.svg)](https://cocoapods.org/pods/Jupiter)
 
-- [Requirements](#requirements)
-- [Usage](#usage)
-- [Installation](#installation)
-- [License](#license)
-
 ## Usage
 
 Supported Weather APIs:
