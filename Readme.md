@@ -1,6 +1,5 @@
 ![](header.png)
 
-[![Travis](https://img.shields.io/travis/Comyar Zaheri/Jupiter/master.svg)](https://travis-ci.org/comyar/Jupiter/branches)
 [![Platforms](https://img.shields.io/cocoapods/p/Jupiter.svg)](https://cocoapods.org/pods/Jupiter)
 [![License](https://img.shields.io/cocoapods/l/Jupiter.svg)](https://raw.githubusercontent.com/Comyar Zaheri/Jupiter/master/LICENSE)
 
