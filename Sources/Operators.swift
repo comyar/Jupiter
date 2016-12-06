@@ -1,5 +1,5 @@
 //
-//  Request.swift
+//  Operators.swift
 //  Jupiter
 //
 //  MIT License
@@ -25,32 +25,23 @@
 //  SOFTWARE.
 
 
-// MARK:- Result
+// MARK:- Comparison
 
-/**
- */
-public enum Result<T> {
-  case success(T)
-  case error(Error)
+infix operator ==?: ComparisonPrecedence
+func ==?<T:Equatable>(a: T?, b: T?) -> Bool {
+  if a == nil && b == nil {
+    return true
+  } else if a == nil || b == nil {
+    return false
+  }
+  return a! == b!
 }
 
-
-// MARK:- Request
-
-/**
- */
-public protocol Request {
-  
-  associatedtype Response
-  
-  /**
-   */
-  var url: URL? { get }
-  
-  
-  func send(handler: @escaping (Result<Response>) -> (Void))
-  
-  /**
-   */
-  static func toResponse(data: Data) throws -> Response
+func ==?<T:Equatable>(a: [T]?, b: [T]?) -> Bool {
+  if a == nil && b == nil {
+    return true
+  } else if a == nil || b == nil {
+    return false
+  }
+  return a! == b!
 }

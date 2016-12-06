@@ -7,17 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		001557572C9C5F791CB6A5742E872A76 /* Pods-Jupiter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3360BA142F33EC6ACB4C3E4F7F83D73F /* Pods-Jupiter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		001557572C9C5F791CB6A5742E872A76 /* Pods-Jupiter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 23E4B408BD135B5CB5E20D4B2CBC5DF4 /* Pods-Jupiter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07E2E2E56DC032133DF91B87E7A55DE8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7512E09FD626FC8CE110467EAD517EA /* CoreGraphics.framework */; };
 		2BE0C4CA279688967A0CF1E59A5F1726 /* Unbox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 04642E73CA3DFD34D1AC085AFA71EB70 /* Unbox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3806FE805CC2DC572B2357A743A8BF35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A635401944412E396EA69FF81D70EAD8 /* Foundation.framework */; };
-		4579BCC0E82C0086E2AD6B0127AAF267 /* Pods-Jupiter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA88F9D88439D84E5C727936E836223 /* Pods-Jupiter-dummy.m */; };
+		3EC13264494E9EF1E7FCB15007EA4F5E /* Pods-JupiterTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C54F44315C29120EC09C4D6B0C566B86 /* Pods-JupiterTests-dummy.m */; };
+		4579BCC0E82C0086E2AD6B0127AAF267 /* Pods-Jupiter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B75C3DE87DCD86D09D66CC2068778D /* Pods-Jupiter-dummy.m */; };
+		55D0A14794829ECA8E0D9BB727AE2907 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A635401944412E396EA69FF81D70EAD8 /* Foundation.framework */; };
+		5E851794FB8D923E960106F23B5DAB58 /* Pods-JupiterTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F92DB16A73B866362410AF6D61E6F5F8 /* Pods-JupiterTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		834D126952F1BCCF80DBF72F5075C18B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A635401944412E396EA69FF81D70EAD8 /* Foundation.framework */; };
 		9D2DA644623B2F37322DEC47E50AF575 /* Unbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307DE3C68047C0E19358863687B0E39F /* Unbox.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A33B2C99606FD6E3F9BB72B4CC4F17C5 /* Unbox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E274990B15A5EF99CCC6B38EC4B8E52 /* Unbox-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3813505172C0B34555CE013C7E060EDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 990507534529CA8B5817485F1E1CE90C;
+			remoteInfo = Unbox;
+		};
 		8E65841FF589A742965116DA0ED4C0CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -30,28 +40,47 @@
 /* Begin PBXFileReference section */
 		04642E73CA3DFD34D1AC085AFA71EB70 /* Unbox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Unbox-umbrella.h"; sourceTree = "<group>"; };
 		1E274990B15A5EF99CCC6B38EC4B8E52 /* Unbox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Unbox-dummy.m"; sourceTree = "<group>"; };
+		23E4B408BD135B5CB5E20D4B2CBC5DF4 /* Pods-Jupiter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Jupiter-umbrella.h"; sourceTree = "<group>"; };
+		26AE7DF9ECD6CC704E94849BCE6CEE15 /* Pods_Jupiter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Jupiter.framework; path = "Pods-Jupiter.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		307DE3C68047C0E19358863687B0E39F /* Unbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Unbox.swift; path = Sources/Unbox.swift; sourceTree = "<group>"; };
-		3360BA142F33EC6ACB4C3E4F7F83D73F /* Pods-Jupiter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Jupiter-umbrella.h"; sourceTree = "<group>"; };
-		33C4FA5C2E05460145F3C539DB79C3B3 /* Pods-Jupiter-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Jupiter-acknowledgements.plist"; sourceTree = "<group>"; };
-		39E649AC7F12AC3F053762855F66588A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BE521FE0E648CC8A9C28D6339F7B5EF /* Pods-JupiterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JupiterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3D63EAC467A28F482A2226540AE65D82 /* Unbox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Unbox-prefix.pch"; sourceTree = "<group>"; };
-		418718072E9136854627D5AD265C5496 /* Pods-Jupiter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jupiter.debug.xcconfig"; sourceTree = "<group>"; };
-		50E36A68C63BD0A49B1B3A30F24F78A2 /* Pods_Jupiter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jupiter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49217D6D506185C502B603288F9233BD /* Pods-Jupiter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Jupiter.modulemap"; sourceTree = "<group>"; };
 		560BEEF29A3A37D16760C5EC6ACAD527 /* Unbox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Unbox.xcconfig; sourceTree = "<group>"; };
+		5615E431D65EAF4870599D7D3AC869B0 /* Pods_JupiterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JupiterTests.framework; path = "Pods-JupiterTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A9CC70A09EE7D86A3231A200B150F3E /* Pods-JupiterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JupiterTests.release.xcconfig"; sourceTree = "<group>"; };
+		5F27FF07A88A1F437BF8C11549084E0D /* Pods-JupiterTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JupiterTests-resources.sh"; sourceTree = "<group>"; };
+		69D0A9A575CDAD9C1EFE492358FF00A3 /* Pods-JupiterTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-JupiterTests.modulemap"; sourceTree = "<group>"; };
 		6DB7E06699A341ED7C8D90ABD2E4144D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		991474CE061784DFD9D447FE70445DFD /* Unbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Unbox.modulemap; sourceTree = "<group>"; };
-		A29939878040D4B30DE510B4C930CA54 /* Pods-Jupiter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jupiter.release.xcconfig"; sourceTree = "<group>"; };
+		73CDFEE35D478860A5F41450E6723F5A /* Pods-Jupiter-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Jupiter-resources.sh"; sourceTree = "<group>"; };
+		781970472860705CD0C813DFA0D45DD5 /* Pods-Jupiter-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Jupiter-acknowledgements.markdown"; sourceTree = "<group>"; };
+		82E2DE7D507AF44B8B629E24964FEDF9 /* Pods-JupiterTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JupiterTests-frameworks.sh"; sourceTree = "<group>"; };
+		843A155AED09C50E033BCDAE1F4D920A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B0AD8C4F97AC39A1F928C5D0C64EA50 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93B75C3DE87DCD86D09D66CC2068778D /* Pods-Jupiter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Jupiter-dummy.m"; sourceTree = "<group>"; };
+		991474CE061784DFD9D447FE70445DFD /* Unbox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Unbox.modulemap; sourceTree = "<group>"; };
 		A635401944412E396EA69FF81D70EAD8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		AB4E5D6A9F181A0E2206608407424CE2 /* Unbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Unbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF044B90D042EF08BE91BB43EB5D2E57 /* Pods-Jupiter-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Jupiter-resources.sh"; sourceTree = "<group>"; };
-		AFA88F9D88439D84E5C727936E836223 /* Pods-Jupiter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Jupiter-dummy.m"; sourceTree = "<group>"; };
-		CF3B35621412482D1396C68EB1E4D35E /* Pods-Jupiter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Jupiter.modulemap"; sourceTree = "<group>"; };
-		E3D8D782EE2342F1BFD3EC035B039260 /* Pods-Jupiter-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Jupiter-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C54F44315C29120EC09C4D6B0C566B86 /* Pods-JupiterTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JupiterTests-dummy.m"; sourceTree = "<group>"; };
+		D7CBEF498833CB33E947E759A8533289 /* Unbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Unbox.framework; path = Unbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8AC81E05063FD2DAB2BA5039F14CDF8 /* Pods-JupiterTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JupiterTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		DA3FCE4614F250E64A71541037446587 /* Pods-Jupiter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jupiter.debug.xcconfig"; sourceTree = "<group>"; };
+		E2B4B298C7883158F5911B14AAB301AB /* Pods-JupiterTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JupiterTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E7512E09FD626FC8CE110467EAD517EA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		F33D784FD7E58BA34088D21C71C6CEE0 /* Pods-Jupiter-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Jupiter-acknowledgements.plist"; sourceTree = "<group>"; };
+		F92DB16A73B866362410AF6D61E6F5F8 /* Pods-JupiterTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JupiterTests-umbrella.h"; sourceTree = "<group>"; };
+		FB6E57D666717FAEE5718719317F212E /* Pods-Jupiter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jupiter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4B55375D582A2F81EC6C87CC73F74102 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55D0A14794829ECA8E0D9BB727AE2907 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6868884591A5B1A6B6641613262C5F88 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -72,6 +101,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0767D32523000DCDE9CE6E6840BD55C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26AE7DF9ECD6CC704E94849BCE6CEE15 /* Pods_Jupiter.framework */,
+				5615E431D65EAF4870599D7D3AC869B0 /* Pods_JupiterTests.framework */,
+				D7CBEF498833CB33E947E759A8533289 /* Unbox.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0F064D04E379CE8E07B6BDB97C593316 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +118,23 @@
 				A635401944412E396EA69FF81D70EAD8 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		19103F3B75F9C5D7A485FFA34533FDB8 /* Pods-Jupiter */ = {
+			isa = PBXGroup;
+			children = (
+				843A155AED09C50E033BCDAE1F4D920A /* Info.plist */,
+				49217D6D506185C502B603288F9233BD /* Pods-Jupiter.modulemap */,
+				781970472860705CD0C813DFA0D45DD5 /* Pods-Jupiter-acknowledgements.markdown */,
+				F33D784FD7E58BA34088D21C71C6CEE0 /* Pods-Jupiter-acknowledgements.plist */,
+				93B75C3DE87DCD86D09D66CC2068778D /* Pods-Jupiter-dummy.m */,
+				73CDFEE35D478860A5F41450E6723F5A /* Pods-Jupiter-resources.sh */,
+				23E4B408BD135B5CB5E20D4B2CBC5DF4 /* Pods-Jupiter-umbrella.h */,
+				DA3FCE4614F250E64A71541037446587 /* Pods-Jupiter.debug.xcconfig */,
+				FB6E57D666717FAEE5718719317F212E /* Pods-Jupiter.release.xcconfig */,
+			);
+			name = "Pods-Jupiter";
+			path = "Target Support Files/Pods-Jupiter";
 			sourceTree = "<group>";
 		};
 		23333F16D8ADCEAC6FAC78FC5205F222 /* Support Files */ = {
@@ -95,40 +151,6 @@
 			path = "../Target Support Files/Unbox";
 			sourceTree = "<group>";
 		};
-		28F1CC3734A4BA2B1BFA3595A78951B4 /* Pods-Jupiter */ = {
-			isa = PBXGroup;
-			children = (
-				39E649AC7F12AC3F053762855F66588A /* Info.plist */,
-				CF3B35621412482D1396C68EB1E4D35E /* Pods-Jupiter.modulemap */,
-				E3D8D782EE2342F1BFD3EC035B039260 /* Pods-Jupiter-acknowledgements.markdown */,
-				33C4FA5C2E05460145F3C539DB79C3B3 /* Pods-Jupiter-acknowledgements.plist */,
-				AFA88F9D88439D84E5C727936E836223 /* Pods-Jupiter-dummy.m */,
-				AF044B90D042EF08BE91BB43EB5D2E57 /* Pods-Jupiter-resources.sh */,
-				3360BA142F33EC6ACB4C3E4F7F83D73F /* Pods-Jupiter-umbrella.h */,
-				418718072E9136854627D5AD265C5496 /* Pods-Jupiter.debug.xcconfig */,
-				A29939878040D4B30DE510B4C930CA54 /* Pods-Jupiter.release.xcconfig */,
-			);
-			name = "Pods-Jupiter";
-			path = "Target Support Files/Pods-Jupiter";
-			sourceTree = "<group>";
-		};
-		33A8280FEB885DA78D5345B9E4CEDB2C /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				28F1CC3734A4BA2B1BFA3595A78951B4 /* Pods-Jupiter */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		3632A37B3197BE5ADE139706AFAE8401 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				50E36A68C63BD0A49B1B3A30F24F78A2 /* Pods_Jupiter.framework */,
-				AB4E5D6A9F181A0E2206608407424CE2 /* Unbox.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,12 +159,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		44FE7D1A8246404CBFE4EE48FFF32A12 /* Pods-JupiterTests */ = {
+			isa = PBXGroup;
+			children = (
+				8B0AD8C4F97AC39A1F928C5D0C64EA50 /* Info.plist */,
+				69D0A9A575CDAD9C1EFE492358FF00A3 /* Pods-JupiterTests.modulemap */,
+				E2B4B298C7883158F5911B14AAB301AB /* Pods-JupiterTests-acknowledgements.markdown */,
+				D8AC81E05063FD2DAB2BA5039F14CDF8 /* Pods-JupiterTests-acknowledgements.plist */,
+				C54F44315C29120EC09C4D6B0C566B86 /* Pods-JupiterTests-dummy.m */,
+				82E2DE7D507AF44B8B629E24964FEDF9 /* Pods-JupiterTests-frameworks.sh */,
+				5F27FF07A88A1F437BF8C11549084E0D /* Pods-JupiterTests-resources.sh */,
+				F92DB16A73B866362410AF6D61E6F5F8 /* Pods-JupiterTests-umbrella.h */,
+				3BE521FE0E648CC8A9C28D6339F7B5EF /* Pods-JupiterTests.debug.xcconfig */,
+				5A9CC70A09EE7D86A3231A200B150F3E /* Pods-JupiterTests.release.xcconfig */,
+			);
+			name = "Pods-JupiterTests";
+			path = "Target Support Files/Pods-JupiterTests";
+			sourceTree = "<group>";
+		};
 		65A8273A056417D7DCDAA4BA6013EC7F /* Unbox */ = {
 			isa = PBXGroup;
 			children = (
 				307DE3C68047C0E19358863687B0E39F /* Unbox.swift */,
 				23333F16D8ADCEAC6FAC78FC5205F222 /* Support Files */,
 			);
+			name = Unbox;
 			path = Unbox;
 			sourceTree = "<group>";
 		};
@@ -152,9 +193,18 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
 				F8958432F9D8E35B6010E00E36731D5E /* Pods */,
-				3632A37B3197BE5ADE139706AFAE8401 /* Products */,
-				33A8280FEB885DA78D5345B9E4CEDB2C /* Targets Support Files */,
+				0767D32523000DCDE9CE6E6840BD55C7 /* Products */,
+				C81E7B10661A425FE74F3FBB2DDB04A5 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		C81E7B10661A425FE74F3FBB2DDB04A5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				19103F3B75F9C5D7A485FFA34533FDB8 /* Pods-Jupiter */,
+				44FE7D1A8246404CBFE4EE48FFF32A12 /* Pods-JupiterTests */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		F8958432F9D8E35B6010E00E36731D5E /* Pods */ = {
@@ -173,6 +223,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BE0C4CA279688967A0CF1E59A5F1726 /* Unbox-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF97A40E7044127428C6B0C044781C4B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E851794FB8D923E960106F23B5DAB58 /* Pods-JupiterTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +260,25 @@
 			);
 			name = "Pods-Jupiter";
 			productName = "Pods-Jupiter";
-			productReference = 50E36A68C63BD0A49B1B3A30F24F78A2 /* Pods_Jupiter.framework */;
+			productReference = 26AE7DF9ECD6CC704E94849BCE6CEE15 /* Pods_Jupiter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		96E69046D88F2093808D034E33C6ED16 /* Pods-JupiterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCF323333E268FD4DB6C12969CAD0DF5 /* Build configuration list for PBXNativeTarget "Pods-JupiterTests" */;
+			buildPhases = (
+				B44E57260A40ABB1378E79A52B17332E /* Sources */,
+				4B55375D582A2F81EC6C87CC73F74102 /* Frameworks */,
+				AF97A40E7044127428C6B0C044781C4B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1724BA6EE6B9688DD63AF95E7C01BD37 /* PBXTargetDependency */,
+			);
+			name = "Pods-JupiterTests";
+			productName = "Pods-JupiterTests";
+			productReference = 5615E431D65EAF4870599D7D3AC869B0 /* Pods_JupiterTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		990507534529CA8B5817485F1E1CE90C /* Unbox */ = {
@@ -219,7 +295,7 @@
 			);
 			name = Unbox;
 			productName = Unbox;
-			productReference = AB4E5D6A9F181A0E2206608407424CE2 /* Unbox.framework */;
+			productReference = D7CBEF498833CB33E947E759A8533289 /* Unbox.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -239,11 +315,12 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 3632A37B3197BE5ADE139706AFAE8401 /* Products */;
+			productRefGroup = 0767D32523000DCDE9CE6E6840BD55C7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				115ECCE6FD614E3258E9B5A9A609CF3D /* Pods-Jupiter */,
+				96E69046D88F2093808D034E33C6ED16 /* Pods-JupiterTests */,
 				990507534529CA8B5817485F1E1CE90C /* Unbox */,
 			);
 		};
@@ -259,6 +336,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B44E57260A40ABB1378E79A52B17332E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EC13264494E9EF1E7FCB15007EA4F5E /* Pods-JupiterTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5424FE5E60EADAB5B39CFCC215553A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -270,6 +355,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1724BA6EE6B9688DD63AF95E7C01BD37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Unbox;
+			target = 990507534529CA8B5817485F1E1CE90C /* Unbox */;
+			targetProxy = 3813505172C0B34555CE013C7E060EDA /* PBXContainerItemProxy */;
+		};
 		A74566E7F89120949217B3C5FF127A3A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Unbox;
@@ -281,7 +372,7 @@
 /* Begin XCBuildConfiguration section */
 		0487C02AC00039E46F9E317EE490518A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 418718072E9136854627D5AD265C5496 /* Pods-Jupiter.debug.xcconfig */;
+			baseConfigurationReference = DA3FCE4614F250E64A71541037446587 /* Pods-Jupiter.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -359,6 +450,41 @@
 			};
 			name = Debug;
 		};
+		3EB7EA374F48C2C6BDBC474D55D322FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A9CC70A09EE7D86A3231A200B150F3E /* Pods-JupiterTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JupiterTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JupiterTests/Pods-JupiterTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JupiterTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		5370261B3F70D7556CCF22E792087E54 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 560BEEF29A3A37D16760C5EC6ACAD527 /* Unbox.xcconfig */;
@@ -393,7 +519,7 @@
 		};
 		5ABBB28A5FCB9B24B6848FE3B19E665D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A29939878040D4B30DE510B4C930CA54 /* Pods-Jupiter.release.xcconfig */;
+			baseConfigurationReference = FB6E57D666717FAEE5718719317F212E /* Pods-Jupiter.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -453,6 +579,42 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DE476E393AE8F023E26F565743A2A59B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BE521FE0E648CC8A9C28D6339F7B5EF /* Pods-JupiterTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JupiterTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JupiterTests/Pods-JupiterTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_JupiterTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -525,6 +687,15 @@
 			buildConfigurations = (
 				7E473B34B3CB17A1C60A8B96704D522E /* Debug */,
 				5370261B3F70D7556CCF22E792087E54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCF323333E268FD4DB6C12969CAD0DF5 /* Build configuration list for PBXNativeTarget "Pods-JupiterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE476E393AE8F023E26F565743A2A59B /* Debug */,
+				3EB7EA374F48C2C6BDBC474D55D322FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

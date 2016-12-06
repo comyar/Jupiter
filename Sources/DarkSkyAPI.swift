@@ -107,7 +107,7 @@ public struct DarkSkyForecastRequest: DarkSkyRequest {
     self.longitude = longitude
   }
   
-  public func toResponse(data: Data) throws -> DarkSkyForecastResponse {
+  public static func toResponse(data: Data) throws -> DarkSkyForecastResponse {
     return try unbox(data: data)
   }
   
@@ -117,7 +117,7 @@ public struct DarkSkyForecastRequest: DarkSkyRequest {
         handler(.error(error))
       } else {
         do {
-          handler(.success(try self.toResponse(data: data!)))
+          handler(.success(try DarkSkyForecastRequest.toResponse(data: data!)))
         } catch {
           handler(.error(error))
         }
@@ -129,7 +129,8 @@ public struct DarkSkyForecastRequest: DarkSkyRequest {
 
 // MARK:- DarkSkyForecastResponse
 
-public struct DarkSkyForecastResponse {
+public class DarkSkyForecastResponse: NSObject, NSCoding, Unboxable {
+  
   public let latitude: Double?
   public let longitude: Double?
   public let timezone: String?
@@ -138,21 +139,110 @@ public struct DarkSkyForecastResponse {
   public let hourly: DarkSkyDataBlock?
   public let daily: DarkSkyDataBlock?
   public let alerts: [DarkSkyAlert]?
+  
+  // MARK: NSCoding
+  
+  public required init(coder aDecoder: NSCoder) {
+    latitude = aDecoder.decodeObject(forKey:"latitude") as? Double
+    longitude = aDecoder.decodeObject(forKey:"longitude") as? Double
+    timezone = aDecoder.decodeObject(forKey:"timezone") as? String
+    currently = aDecoder.decodeObject(forKey:"currently") as? DarkSkyDataPoint
+    minutely = aDecoder.decodeObject(forKey:"minutely") as? DarkSkyDataBlock
+    hourly = aDecoder.decodeObject(forKey:"hourly") as? DarkSkyDataBlock
+    daily = aDecoder.decodeObject(forKey:"daily") as? DarkSkyDataBlock
+    alerts = aDecoder.decodeObject(forKey:"alerts") as? [DarkSkyAlert]
+  }
+  
+  public func encode(with aCoder: NSCoder) {
+    aCoder.encode(latitude, forKey:"latitude")
+    aCoder.encode(longitude, forKey:"longitude")
+    aCoder.encode(timezone, forKey:"timezone")
+    aCoder.encode(currently, forKey:"currently")
+    aCoder.encode(minutely, forKey:"minutely")
+    aCoder.encode(hourly, forKey:"hourly")
+    aCoder.encode(daily, forKey:"daily")
+    aCoder.encode(alerts, forKey:"alerts")
+  }
+  
+  // MARK: NSObject
+  
+  public override func isEqual(_ object: Any?) -> Bool {
+    if let rhs = object as? DarkSkyForecastResponse {
+      return latitude ==? rhs.latitude &&
+        longitude ==? rhs.longitude &&
+        timezone ==? rhs.timezone &&
+        currently ==? rhs.currently &&
+        minutely ==? rhs.minutely &&
+        hourly ==? rhs.hourly &&
+        daily ==? rhs.daily &&
+        alerts ==? rhs.alerts
+    }
+    return false
+  }
+  
+  // MARK: Unboxable
+  
+  public required init(unboxer: Unboxer) throws {
+    latitude = unboxer.unbox(key: "latitude")
+    longitude = unboxer.unbox(key: "longitude")
+    timezone = unboxer.unbox(key: "timezone")
+    currently = unboxer.unbox(key: "currently")
+    minutely = unboxer.unbox(key: "minutely")
+    hourly = unboxer.unbox(key: "hourly")
+    daily = unboxer.unbox(key: "daily")
+    alerts = unboxer.unbox(key: "alerts")
+  }
 }
 
 
 // MARK:- DarkSkyDataBlock
 
-public struct DarkSkyDataBlock {
+public class DarkSkyDataBlock: NSObject, NSCoding, Unboxable {
+  
   public let summary: String?
   public let icon: Climacon?
   public let data: [DarkSkyDataPoint]?
+  
+  
+  // MARK: NSCoding
+  
+  public required init(coder aDecoder: NSCoder) {
+    summary = aDecoder.decodeObject(forKey: "summary") as? String
+    icon = Climacon(rawValue: aDecoder.decodeObject(forKey:"icon") as? String ?? "")
+    data = aDecoder.decodeObject(forKey: "data") as? [DarkSkyDataPoint]
+  }
+  
+  public func encode(with aCoder: NSCoder) {
+    aCoder.encode(summary, forKey: "summary")
+    aCoder.encode(icon?.rawValue, forKey: "icon")
+    aCoder.encode(data, forKey: "data")
+  }
+  
+  // MARK: NSObject
+  
+  public override func isEqual(_ object: Any?) -> Bool {
+    if let rhs = object as? DarkSkyDataBlock {
+      return summary ==? rhs.summary &&
+        icon ==? rhs.icon &&
+        data ==? rhs.data
+    }
+    return false
+  }
+  
+  // MARK: Unboxable
+  
+  public required init(unboxer: Unboxer) throws {
+    summary = unboxer.unbox(key: "summary")
+    icon = unboxer.unbox(key: "icon")
+    data = unboxer.unbox(key: "data")
+  }
 }
 
 
 // MARK:- DarkSkyDataPoint
 
-public struct DarkSkyDataPoint {
+public class DarkSkyDataPoint: NSObject, NSCoding, Unboxable {
+  
   public let time: TimeInterval
   public let summary: String?
   public let icon: Climacon?
@@ -184,16 +274,199 @@ public struct DarkSkyDataPoint {
   public let cloudCover: Double?
   public let pressure: Double?
   public let ozone: Double?
+  
+  // MARK: NSCoding
+  
+  public required init(coder aDecoder: NSCoder) {
+    time = aDecoder.decodeDouble(forKey:"time")
+    summary = aDecoder.decodeObject(forKey:"summary") as? String
+    icon = Climacon(rawValue: aDecoder.decodeObject(forKey:"icon") as? String ?? "")
+    sunriseTime = aDecoder.decodeObject(forKey:"sunriseTime") as? TimeInterval
+    sunsetTime = aDecoder.decodeObject(forKey:"sunsetTime") as? TimeInterval
+    moonPhase = aDecoder.decodeObject(forKey:"moonPhase") as? Double
+    nearestStormDistance = aDecoder.decodeObject(forKey:"nearestStormDistance") as? Double
+    precipIntensity = aDecoder.decodeObject(forKey:"precipIntensity") as? Double
+    precipIntensityError = aDecoder.decodeObject(forKey:"precipIntensityError") as? Double
+    precipProbability = aDecoder.decodeObject(forKey:"precipProbability") as? Double
+    precipIntensityMax = aDecoder.decodeObject(forKey:"precipIntensityMax") as? Double
+    precipIntensityMaxTime = aDecoder.decodeObject(forKey:"precipIntensityMaxTime") as? TimeInterval
+    precipType = aDecoder.decodeObject(forKey:"precipType") as? String
+    temperature = aDecoder.decodeObject(forKey:"temperature") as? Double
+    temperatureMin = aDecoder.decodeObject(forKey:"temperatureMin") as? Double
+    temperatureMinTime = aDecoder.decodeObject(forKey:"temperatureMinTime") as? TimeInterval
+    temperatureMax = aDecoder.decodeObject(forKey:"temperatureMax") as? Double
+    temperatureMaxTime = aDecoder.decodeObject(forKey:"temperatureMaxTime") as? TimeInterval
+    apparentTemperature = aDecoder.decodeObject(forKey:"apparentTemperature") as? Double
+    apparentTemperatureMin = aDecoder.decodeObject(forKey:"apparentTemperatureMin") as? Double
+    apparentTemperatureMinTime = aDecoder.decodeObject(forKey:"apparentTemperatureMinTime") as? TimeInterval
+    apparentTemperatureMax = aDecoder.decodeObject(forKey:"apparentTemperatureMax") as? Double
+    apparentTemperatureMaxTime = aDecoder.decodeObject(forKey:"apparentTemperatureMaxTime") as? TimeInterval
+    dewPoint = aDecoder.decodeObject(forKey:"dewPoint") as? Double
+    humidity = aDecoder.decodeObject(forKey:"humidity") as? Double
+    windSpeed = aDecoder.decodeObject(forKey:"windSpeed") as? Double
+    windBearing = aDecoder.decodeObject(forKey:"windBearing") as? Double
+    visibility = aDecoder.decodeObject(forKey:"visibility") as? Double
+    cloudCover = aDecoder.decodeObject(forKey:"cloudCover") as? Double
+    pressure = aDecoder.decodeObject(forKey:"pressure") as? Double
+    ozone = aDecoder.decodeObject(forKey:"ozone") as? Double
+  }
+  
+  public func encode(with aCoder: NSCoder) {
+    aCoder.encode(time, forKey:"time")
+    aCoder.encode(summary, forKey:"summary")
+    aCoder.encode(icon?.rawValue, forKey:"icon")
+    aCoder.encode(sunriseTime, forKey:"sunriseTime")
+    aCoder.encode(sunsetTime, forKey:"sunsetTime")
+    aCoder.encode(moonPhase, forKey:"moonPhase")
+    aCoder.encode(nearestStormDistance, forKey:"nearestStormDistance")
+    aCoder.encode(precipIntensity, forKey:"precipIntensity")
+    aCoder.encode(precipIntensityError, forKey:"precipIntensityError")
+    aCoder.encode(precipProbability, forKey:"precipProbability")
+    aCoder.encode(precipIntensityMax, forKey:"precipIntensityMax")
+    aCoder.encode(precipIntensityMaxTime, forKey:"precipIntensityMaxTime")
+    aCoder.encode(precipType, forKey:"precipType")
+    aCoder.encode(temperature, forKey:"temperature")
+    aCoder.encode(temperatureMin, forKey:"temperatureMin")
+    aCoder.encode(temperatureMinTime, forKey:"temperatureMinTime")
+    aCoder.encode(temperatureMax, forKey:"temperatureMax")
+    aCoder.encode(temperatureMaxTime, forKey:"temperatureMaxTime")
+    aCoder.encode(apparentTemperature, forKey:"apparentTemperature")
+    aCoder.encode(apparentTemperatureMin, forKey:"apparentTemperatureMin")
+    aCoder.encode(apparentTemperatureMinTime, forKey:"apparentTemperatureMinTime")
+    aCoder.encode(apparentTemperatureMax, forKey:"apparentTemperatureMax")
+    aCoder.encode(apparentTemperatureMaxTime, forKey:"apparentTemperatureMaxTime")
+    aCoder.encode(dewPoint, forKey:"dewPoint")
+    aCoder.encode(humidity, forKey:"humidity")
+    aCoder.encode(windSpeed, forKey:"windSpeed")
+    aCoder.encode(windBearing, forKey:"windBearing")
+    aCoder.encode(visibility, forKey:"visibility")
+    aCoder.encode(cloudCover, forKey:"cloudCover")
+    aCoder.encode(pressure, forKey:"pressure")
+    aCoder.encode(ozone, forKey:"ozone")
+  }
+  
+  // MARK: NSObject
+  
+  public override func isEqual(_ object: Any?) -> Bool {
+    if let rhs = object as? DarkSkyDataPoint {
+      return time ==? rhs.time &&
+        summary ==? rhs.summary &&
+        icon ==? rhs.icon &&
+        sunriseTime ==? rhs.sunriseTime &&
+        sunsetTime ==? rhs.sunsetTime &&
+        moonPhase ==? rhs.moonPhase &&
+        nearestStormDistance ==? rhs.nearestStormDistance &&
+        precipIntensity ==? rhs.precipIntensity &&
+        precipIntensityError ==? rhs.precipIntensityError &&
+        precipProbability ==? rhs.precipProbability &&
+        precipIntensityMax ==? rhs.precipIntensityMax &&
+        precipIntensityMaxTime ==? rhs.precipIntensityMaxTime &&
+        precipType ==? rhs.precipType &&
+        temperature ==? rhs.temperature &&
+        temperatureMin ==? rhs.temperatureMin &&
+        temperatureMinTime ==? rhs.temperatureMinTime &&
+        temperatureMax ==? rhs.temperatureMax &&
+        temperatureMaxTime ==? rhs.temperatureMaxTime &&
+        apparentTemperature ==? rhs.apparentTemperature &&
+        apparentTemperatureMin ==? rhs.apparentTemperatureMin &&
+        apparentTemperatureMinTime ==? rhs.apparentTemperatureMinTime &&
+        apparentTemperatureMax ==? rhs.apparentTemperatureMax &&
+        apparentTemperatureMaxTime ==? rhs.apparentTemperatureMaxTime &&
+        dewPoint ==? rhs.dewPoint &&
+        humidity ==? rhs.humidity &&
+        windSpeed ==? rhs.windSpeed &&
+        windBearing ==? rhs.windBearing &&
+        visibility ==? rhs.visibility &&
+        cloudCover ==? rhs.cloudCover &&
+        pressure ==? rhs.pressure &&
+        ozone ==? rhs.ozone
+    }
+    return false
+  }
+  
+  // MARK: Unboxable
+  
+  public required init(unboxer: Unboxer) throws {
+    time = try unboxer.unbox(key: "time")
+    summary = unboxer.unbox(key: "summary")
+    icon = unboxer.unbox(key: "icon")
+    sunriseTime = unboxer.unbox(key: "sunriseTime")
+    sunsetTime = unboxer.unbox(key: "sunsetTime")
+    moonPhase = unboxer.unbox(key: "moonPhase")
+    nearestStormDistance = unboxer.unbox(key: "nearestStormDistance")
+    precipIntensity = unboxer.unbox(key: "precipIntensity")
+    precipIntensityError = unboxer.unbox(key: "precipIntensityError")
+    precipProbability = unboxer.unbox(key: "precipProbability")
+    precipIntensityMax = unboxer.unbox(key: "precipIntensityMax")
+    precipIntensityMaxTime = unboxer.unbox(key: "precipIntensityMaxTime")
+    precipType = unboxer.unbox(key: "precipType")
+    temperature = unboxer.unbox(key: "temperature")
+    temperatureMin = unboxer.unbox(key: "temperatureMin")
+    temperatureMinTime = unboxer.unbox(key: "temperatureMinTime")
+    temperatureMax = unboxer.unbox(key: "temperatureMax")
+    temperatureMaxTime = unboxer.unbox(key: "temperatureMaxTime")
+    apparentTemperature = unboxer.unbox(key: "apparentTemperature")
+    apparentTemperatureMin = unboxer.unbox(key: "apparentTemperatureMin")
+    apparentTemperatureMinTime = unboxer.unbox(key: "apparentTemperatureMinTime")
+    apparentTemperatureMax = unboxer.unbox(key: "apparentTemperatureMax")
+    apparentTemperatureMaxTime = unboxer.unbox(key: "apparentTemperatureMaxTime")
+    dewPoint = unboxer.unbox(key: "dewPoint")
+    humidity = unboxer.unbox(key: "humidity")
+    windSpeed = unboxer.unbox(key: "windSpeed")
+    windBearing = unboxer.unbox(key: "windBearing")
+    visibility = unboxer.unbox(key: "visibility")
+    cloudCover = unboxer.unbox(key: "cloudCover")
+    pressure = unboxer.unbox(key: "pressure")
+    ozone = unboxer.unbox(key: "ozone")
+  }
 }
 
 
 // MARK:- DarkSkyAlert
 
-public struct DarkSkyAlert {
-  let title: String
-  let description: String
-  let expires: TimeInterval
-  let uri: URL
+public class DarkSkyAlert: NSObject, NSCoding, Unboxable {
+  
+  public let title: String
+  public let summary: String
+  public let expires: TimeInterval
+  public let uri: URL
+  
+  
+  // MARK: NSCoding
+  public required init(coder aDecoder: NSCoder) {
+    title = aDecoder.decodeObject(forKey:"title") as! String
+    summary = aDecoder.decodeObject(forKey:"summary") as! String
+    expires = aDecoder.decodeDouble(forKey:"expires")
+    uri = aDecoder.decodeObject(forKey:"uri") as! URL
+  }
+  
+  public func encode(with aCoder: NSCoder) {
+    aCoder.encode(title, forKey:"title")
+    aCoder.encode(summary, forKey:"summary")
+    aCoder.encode(expires, forKey:"expires")
+    aCoder.encode(uri, forKey:"uri")
+  }
+  
+  // MARK: NSObject
+  
+  public override func isEqual(_ object: Any?) -> Bool {
+    if let rhs = object as? DarkSkyAlert {
+      return title ==? rhs.title &&
+        summary ==? rhs.summary &&
+        expires ==? rhs.expires &&
+        uri ==? rhs.uri
+    }
+    return false
+  }
+  
+  // MARK: Unboxable
+  
+  public required init(unboxer: Unboxer) throws {
+    title = try unboxer.unbox(key: "title")
+    summary = try unboxer.unbox(key: "description")
+    expires = try unboxer.unbox(key: "expires")
+    uri = try unboxer.unbox(key: "uri")
+  }
 }
 
 
@@ -258,7 +531,7 @@ public enum DarkSkyResponseType: String {
 }
 
 
-// MARK:- Deserialization
+// MARK:- Serialization
 
 // MARK: Climacon
 
@@ -279,81 +552,5 @@ extension Climacon: UnboxableByTransform {
   public typealias UnboxRawValue = String
   public static func transform(unboxedValue: String) -> Climacon? {
     return icons[unboxedValue] ?? .sun
-  }
-}
-
-
-// MARK: DarkSkyAlert
-
-extension DarkSkyAlert: Unboxable {
-  public init(unboxer: Unboxer) throws {
-    title = try unboxer.unbox(key: "title")
-    description = try unboxer.unbox(key: "description")
-    expires = try unboxer.unbox(key: "expires")
-    uri = try unboxer.unbox(key: "uri")
-  }
-}
-
-// MARK: DarkSkyDataBlock
-
-extension DarkSkyDataBlock: Unboxable {
-  public init(unboxer: Unboxer) throws {
-    summary = unboxer.unbox(key: "summary")
-    icon = unboxer.unbox(key: "icon")
-    data = unboxer.unbox(key: "data")
-  }
-}
-
-
-// MARK: DarkSkyDataPoint
-
-extension DarkSkyDataPoint: Unboxable {
-  public init(unboxer: Unboxer) throws {
-    time = try unboxer.unbox(key: "time")
-    summary = unboxer.unbox(key: "summary")
-    icon = unboxer.unbox(key: "icon")
-    sunriseTime = unboxer.unbox(key: "sunriseTime")
-    sunsetTime = unboxer.unbox(key: "sunsetTime")
-    moonPhase = unboxer.unbox(key: "moonPhase")
-    nearestStormDistance = unboxer.unbox(key: "nearestStormDistance")
-    precipIntensity = unboxer.unbox(key: "precipIntensity")
-    precipIntensityError = unboxer.unbox(key: "precipIntensityError")
-    precipProbability = unboxer.unbox(key: "precipProbability")
-    precipIntensityMax = unboxer.unbox(key: "precipIntensityMax")
-    precipIntensityMaxTime = unboxer.unbox(key: "precipIntensityMaxTime")
-    precipType = unboxer.unbox(key: "precipType")
-    temperature = unboxer.unbox(key: "temperature")
-    temperatureMin = unboxer.unbox(key: "temperatureMin")
-    temperatureMinTime = unboxer.unbox(key: "temperatureMinTime")
-    temperatureMax = unboxer.unbox(key: "temperatureMax")
-    temperatureMaxTime = unboxer.unbox(key: "temperatureMaxTime")
-    apparentTemperature = unboxer.unbox(key: "apparentTemperature")
-    apparentTemperatureMin = unboxer.unbox(key: "apparentTemperatureMin")
-    apparentTemperatureMinTime = unboxer.unbox(key: "apparentTemperatureMinTime")
-    apparentTemperatureMax = unboxer.unbox(key: "apparentTemperatureMax")
-    apparentTemperatureMaxTime = unboxer.unbox(key: "apparentTemperatureMaxTime")
-    dewPoint = unboxer.unbox(key: "dewPoint")
-    humidity = unboxer.unbox(key: "humidity")
-    windSpeed = unboxer.unbox(key: "windSpeed")
-    windBearing = unboxer.unbox(key: "windBearing")
-    visibility = unboxer.unbox(key: "visibility")
-    cloudCover = unboxer.unbox(key: "cloudCover")
-    pressure = unboxer.unbox(key: "pressure")
-    ozone = unboxer.unbox(key: "ozone")
-  }
-}
-
-// MARK: DarkSkyForecastResponse
-
-extension DarkSkyForecastResponse: Unboxable {
-  public init(unboxer: Unboxer) throws {
-    latitude = unboxer.unbox(key: "latitude")
-    longitude = unboxer.unbox(key: "longitude")
-    timezone = unboxer.unbox(key: "timezone")
-    currently = unboxer.unbox(key: "currently")
-    minutely = unboxer.unbox(key: "minutely")
-    hourly = unboxer.unbox(key: "hourly")
-    daily = unboxer.unbox(key: "daily")
-    alerts = unboxer.unbox(key: "alerts")
   }
 }

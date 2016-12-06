@@ -12,3 +12,7 @@ target 'Jupiter' do
   pods
 end
 
+target 'JupiterTests' do
+  pods
+end
+

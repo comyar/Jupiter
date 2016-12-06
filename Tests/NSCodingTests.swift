@@ -1,5 +1,5 @@
 //
-//  Request.swift
+//  Tests.swift
 //  Jupiter
 //
 //  MIT License
@@ -25,32 +25,22 @@
 //  SOFTWARE.
 
 
-// MARK:- Result
+// MARK:- Imports
 
-/**
- */
-public enum Result<T> {
-  case success(T)
-  case error(Error)
-}
+import XCTest
+@testable import Jupiter
 
 
-// MARK:- Request
+// MARK:- NSCodingTests
 
-/**
- */
-public protocol Request {
-  
-  associatedtype Response
-  
-  /**
-   */
-  var url: URL? { get }
-  
-  
-  func send(handler: @escaping (Result<Response>) -> (Void))
-  
-  /**
-   */
-  static func toResponse(data: Data) throws -> Response
+class NSCodingTests: XCTestCase {
+    
+  func testDarkSkyForecastResponseRoundtrip() {
+    let path = Bundle(for: NSCodingTests.self).path(forResource: "darksky.forecast.response", ofType: "json")
+    let json = try! Data(contentsOf: URL(fileURLWithPath: path!))
+    let response = try! DarkSkyForecastRequest.toResponse(data: json)
+    let archived = NSKeyedArchiver.archivedData(withRootObject: response)
+    let unarchived = NSKeyedUnarchiver.unarchiveObject(with: archived)
+    XCTAssertEqual(response, unarchived as! DarkSkyForecastResponse)
+  }
 }
