@@ -59,6 +59,10 @@ let data: Data = ...
 let response = request.toResponse(data: data)
 ```
 
+## Climacons
+
+Jupiter has first-class support for [Climacons](http://adamwhitcroft.com/climacons/), a beautiful set of pictographs designed by [Adam Whitcroft](http://adamwhitcroft.com/). All icon-related fields on response models will be bound to the [Climacon enum](https://github.com/comyar/Jupiter/blob/master/Sources/Climacon.swift) defined in Jupiter, whose raw values map directly to the [Climacons-Font](https://github.com/christiannaths/Climacons-Font) bundled by [Christian Naths](https://christiannaths.com/).
+
 ## Installation
 
 ### CocoaPods
