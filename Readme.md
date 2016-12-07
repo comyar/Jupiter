@@ -56,7 +56,7 @@ let url: URL = request.url!
 let data: Data = ...
 
 /// Parse data and bind to response object
-let response = request.toResponse(data: data)
+let response = DarkSkyForecastRequest.toResponse(data: data)
 ```
 
 ## Climacons
@@ -82,7 +82,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '10.0'
 use_frameworks!
 
-pod 'Jupiter', '~> 0.0.1'
+pod 'Jupiter', '~> 0.0.2'
 ```
 
 Then, run the following command:
@@ -105,7 +105,7 @@ $ brew install carthage
 To integrate Jupiter into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "comyar/Jupiter" ~> 0.0.1
+github "comyar/Jupiter" ~> 0.0.2
 ```
 
 ## License
