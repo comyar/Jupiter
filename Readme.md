@@ -1,9 +1,5 @@
 ![](header.png)
 
-[![Platforms](https://img.shields.io/cocoapods/p/Jupiter.svg)](https://cocoapods.org/pods/Jupiter)
-[![License](https://img.shields.io/cocoapods/l/Jupiter.svg)](https://raw.githubusercontent.com/Comyar Zaheri/Jupiter/master/LICENSE)
-[![CocoaPods compatible](https://img.shields.io/cocoapods/v/Jupiter.svg)](https://cocoapods.org/pods/Jupiter)
-
 ## Usage
 
 Supported Weather APIs:
